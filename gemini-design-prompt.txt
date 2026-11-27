@@ -1,0 +1,79 @@
+You are reviewing a design spec for a make.fun news-image entry BEFORE it is built.
+Competition: news-image-20261127 — "Sum up 27 November's world news in one image"
+($100, top 50). Judge: AI model z-ai/glm-5.3-flash, no news feed, judges the
+image alone against house images from 13 Nov. Criteria in order: (1) names its
+day with specific events of that day; (2) selection/breadth across regions and
+fields; (3) reads clearly, nothing false or self-contradictory; (4) faithful,
+no hype/speculation as fact; (5) craft, legible at ~300px.
+
+SPEC TO REVIEW
+Format: 1024x1024 PNG newspaper front page, cream paper, serif masthead
+"THE WORLD IN ONE DAY" + "FRIDAY 27 NOVEMBER 2026". 40 stories total:
+31 pure 27 Nov (pale "27 NOV" outline pill) + 9 flagged [26 NOV] (dark pill,
+white bold text — event was 26 Nov). Layout: header; 6-number stat strip;
+3 lead panels with flat drawn illustrations; 10-card grid with small drawn
+mini-scenes; one-row UTC timeline (8 items, 00:30–03:00 UTC, "when the world
+learned it"); 27-item tail list in 3 columns; bottom row = world map with 8
+numbered pins + legend, and a DATE CHECK box stating "31 of 40 stories are
+pure 27 Nov; 9 stem from 26 Nov and are flagged [26 Nov] where they appear";
+footer "MAKE.FUN // 27 NOV 2026 // 40 STORIES".
+
+STORIES (headline — deck — source — date status)
+LEADS: 1 EU leaders deadlocked over €1.7tn budget + €45bn Ukraine loan —
+Brussels summit ends no deal (Reuters, pure). 2 Kim vows to expand nuclear
+warheads after Trump outreach (Reuters, pure). 3 Eagles stun Cowboys 39–38,
+biggest Thanksgiving comeback in NFL history; 59-yard FG with 2s left; final
+whistle ~00:30 UTC 27 Nov (Reuters/Sky, pure).
+GRID: 4 NZ coalition one seat short, 65/130, needs Opportunity Party
+(Reuters, pure). 5 IAEA seeks ceasefire to repair Zaporizhzhia power link,
+28th outage (Reuters, pure). 6 Black Friday doors open; Target $1,000 gift
+cards, Kohl's cash envelopes (TheStreet, pure). 7 Zelenskyy warns Russia
+plans major attack on Ukraine power grid in days (AP, pure). 8 Israeli
+strikes kill 10 in Gaza (AP, pure). 9 Brent $96.19, +3.9% on week, near month
+high on Hormuz tanker attacks (Reuters, pure). 10 Asia shares steady; dollar
+set for 3rd monthly gain; Nikkei +0.7% (Reuters, pure). 11 Duterte ICC trial
+starts Monday; 85 murder counts (Reuters, pure). 12 Japan eyes ¥56.3tn
+($350bn) 5-year defence plan (Reuters/Asahi, pure). 13 London Tube strike:
+first of 8 winter strike days (pure).
+TAIL pure: 14 US envoy: biggest Russia–Ukraine prisoner swap "shortly".
+15 Kushner: alleged attack on Putin residence did not happen. 16 Houthis
+claim strikes on Saudi Jizan ports. 17 Indonesia proposes 0.5% palm-oil
+export fee. 18 OPEC+ likely extends output targets to Q1 2027. 19 Trafigura
+to shut Nyrstar zinc smelter. 20 S. Korea court confirms ousted president's
+perjury acquittal. 21 Depardieu to stand trial on rape charge. 22 Two
+arrested over burglary at William & Kate's home. 23 FAA halts Miami traffic
+after FedEx jet leaves runway. 24 ~2,000 refugees reach Canaries in 24h,
+record. 25 Myanmar rejects parts of ICJ genocide ruling. 26 Germany offers
+bigger cash for returning Syrians. 27 ECB picks Hernández de Cos as next
+president. 28 Su-34 base hit in Volgograd region. 29 Power station hit in
+Stavropol. 30 UK pledges £9m for Ukraine wind farm. 31 Chess title level
+1.5–1.5; Fri 27 Nov is first rest day, Game 4 Sat (Guardian/FIDE).
+TAIL [26 NOV]: 32 China protests Japan over Diaoyu vessels (spokesman spoke
+Thu). 33 Cairo fuel-truck fire kills 31. 34 Indonesia mine flood: 14 dead,
+12 missing. 35 Two Italians killed in Kuwait drone attack. 36 Serbia sets
+presidential vote for 27 Dec. 37 DR Congo Ebola passes 12,021 cases, 5,904
+deaths. 38 RSF drones kill 19 in Sudan's Blue Nile. 39 UK £8bn nuclear
+submarine upgrade. 40 Progress 97 docks at ISS.
+
+TIMELINE (UTC): 00:30 Eagles 39–38 · 00:45 IAEA Zaporizhzhia · 01:00 Kim
+nukes · 01:30 Houthis claim Jizan · 02:00 NZ count · 02:30 EU deadlock ·
+02:45 Tube strike day 1 · 03:00 Brent near month high.
+STAT STRIP: €1.7tn EU budget deadlocked · 39–38 Eagles comeback ·
+$96.19 Brent +3.9% week · 65/130 NZ coalition · ~2,000 Canaries refugees ·
+31 Cairo fire [26 NOV].
+MAP PINS: 1 Brussels · 2 Pyongyang · 7 Kyiv · 8 Gaza · 4 Wellington ·
+13 London · 35 Kuwait · 33 Cairo.
+
+PLEASE ANSWER:
+1. Verdict: GO / CONDITIONAL GO (list conditions) / NO-GO (why).
+2. Fact-check the riskiest claims: (a) Eagles–Cowboys final whistle ~00:30
+UTC 27 Nov — is that right? (b) Chess: is Fri 27 Nov really a rest day with
+Game 4 on Sat 28 Nov? (c) Is the Diaoyu protest correctly a 26 Nov event?
+(d) Cairo toll 31 — confirmed? (e) Any headline above you believe is FALSE
+or mis-dated? Check each against what you know; flag anything uncertain.
+3. Design: lead order, stat strip, any layout risk at 300px legibility,
+anything that would lose to the house images or read as self-contradictory.
+4. Top-10 comparison: prior days in this series ran 35–50 stories, 13–15
+drawn scenes, map + timeline + date check. Does this spec plausibly reach
+top-10 quality? What single change would most improve it?
+Keep the reply short and specific. Do not invent news.
